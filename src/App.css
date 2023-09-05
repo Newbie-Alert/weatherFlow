@@ -1,0 +1,344 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1.5rem 2.5rem;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+}
+
+
+/* APP */
+.App {
+  display: flex;
+}
+
+
+
+
+/* NAV BAR */
+.nav_container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.today_info {
+  text-align: center;
+  font-weight: 400;
+}
+
+.today_info h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: -0.025rem;
+  word-spacing: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+
+
+/* MAIN */
+.main_container {
+  width: 100%;
+  background-image: url('../public/bg3.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bg_filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  box-shadow: 0 0 0 3px #fafafa inset;
+}
+
+.main_info {
+  width: fit-content;
+  position: absolute;
+  bottom: 5%;
+  left: 3.5%;
+  color: white;
+}
+
+.main_info_text {
+  word-spacing: 0.05rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.main_info_text span {
+  margin-left: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.main_info_weather {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-block: 0.2rem;
+}
+
+.main_info_weather_icon {
+  display: flex;
+  align-items: center;
+}
+
+.main_info_weather_icon h1 {
+  font-size: 3rem;
+}
+
+.main_info_weather_icon img {
+  width: 100px;
+}
+
+.main_info_weather_rain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  align-items: left;
+}
+
+
+
+/* DETAIL CONTAINER */
+.detail_container {
+  min-width: 450px;
+  height: 100vh;
+  background-color: #fafafa;
+  list-style: none;
+}
+
+.detail_weather_tab {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  margin-block: 1.25rem;
+}
+
+.tab_left {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FA_icon {
+  width: 25px;
+}
+
+.detail_weather_charts {
+  margin-block: 3rem;
+}
+
+.detail_weather_charts h3 {
+  margin-bottom: 1rem;
+}
+
+/* Todo List */
+
+.todo_section {
+  position: relative;
+}
+
+.todo_title {
+  margin-bottom: 1.3rem;
+}
+
+.todo_list {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #eee;
+  position: relative;
+  padding: 1rem 0;
+  overflow: scroll;
+}
+
+.todo_form {
+  width: 100%;
+}
+
+.todo_form input {
+  width: 100%;
+}
+
+.todo_form input {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.todo_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.list_icon {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.list_icon button {
+  border: none;
+  outline: none;
+}
+
+.edit_icon,
+.delete_icon {
+  padding: 0.5rem 0.5rem;
+  margin: auto;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.edit_icon {
+  background-color: rgb(206, 226, 255);
+}
+
+.delete_icon {
+  background-color: rgb(255, 194, 194);
+}
+
+.edit_ui {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  background-color: antiquewhite;
+}
+
+
+@media screen and (max-width:768px) {
+  .App {
+    display: block;
+  }
+
+  .container {
+    padding: 1.5rem 2.5rem;
+    height: 12%;
+    width: fit-content;
+  }
+
+  .loading {
+    font-size: 1.2rem;
+    left: 53%;
+    top: 45%;
+  }
+
+  .nav_container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .main_container {
+    display: none;
+  }
+
+  .main_container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../public/bg3.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .container {
+    width: 100%;
+    position: relative;
+  }
+
+  .main_info {
+    width: 100%;
+    top: 145%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main_info_text {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .main_info_weather {
+    flex-direction: column;
+
+  }
+
+  .main_info_weather_rain {
+    padding-left: 1.5rem;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .bg_filter {
+    box-shadow: none;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  }
+
+
+  .detail_container {
+    min-width: 100%;
+    text-align: center;
+    height: fit-content;
+    background-color: #fafafa;
+    list-style: none;
+  }
+
+  .detail_weather_tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    margin-block: 1rem;
+  }
+
+  .detail_weather_charts {
+    margin-block: 2rem;
+  }
+
+  .todo_title {
+    margin-bottom: 1rem;
+  }
+}
