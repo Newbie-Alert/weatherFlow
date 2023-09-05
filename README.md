@@ -26,3 +26,13 @@
 
 
 작동 모습
+- 메인
+  <img src="1.weatherFlow/full.gif" alt="GIF">
+
+- 투두리스트
+  
+  <img src="1.weatherFlow/todo.gif" alt="GIF">
+
+- 기온 차트
+  
+  <img src="1.weatherFlow/chart.gif" alt="GIF">
