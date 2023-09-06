@@ -22,7 +22,7 @@ router.post('/post', (req, res, next) => {
   const postData = req.body
   items.push(postData);
   res.status(201).json({ message: "created" })
-  console.log(items);
+  // console.log(items);
 })
 
 // PUT _ body:{itemId, editedText}
@@ -33,7 +33,7 @@ router.put('/edit/:id', ((req, res, next) => {
   console.log(foundItem);
   foundItem.content = editedText;
   res.status(200).json(foundItem);
-  console.log(items);
+  // console.log(items);
 }))
 
 // DELETE _ body: {item id}
@@ -42,7 +42,7 @@ router.delete('/delete/:id', (req, res, next) => {
   const deleted = items.filter(el => el.id !== itemId)
   res.status(200).json(deleted)
 
-  console.log(deleted);
+  // console.log(deleted);
 })
 
 
