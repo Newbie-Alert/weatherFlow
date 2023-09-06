@@ -20,8 +20,8 @@ router.get('/', (req, res) => {
 // POST _ body:{id, content, created, username, finish}
 router.post('/post', (req, res, next) => {
   const postData = req.body
-  items.push(postData);
-  res.status(201).json({ message: "created" })
+  items = [postData, ...items];
+  res.status(201).json(items)
   // console.log(items);
 })
 
@@ -39,8 +39,8 @@ router.put('/edit/:id', ((req, res, next) => {
 // DELETE _ body: {item id}
 router.delete('/delete/:id', (req, res, next) => {
   const itemId = req.params.id;
-  const deleted = items.filter(el => el.id !== itemId)
-  res.status(200).json(deleted)
+  items = items.filter(el => el.id !== itemId)
+  res.sendStatus(204)
 
   // console.log(deleted);
 })
