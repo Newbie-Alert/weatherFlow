@@ -15,7 +15,7 @@ app.use('/item', router);
 
 // ERROR HANDLER
 app.use('*', (err, req, res, next) => {
-  res.status(400).json({ message: "Sorry, not found" })
+  res.status(404).json({ message: "Sorry, not found" })
 })
 
 // PORT
