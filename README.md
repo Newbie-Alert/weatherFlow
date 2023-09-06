@@ -30,7 +30,7 @@
 
 작동 모습
 - 메인
-  <img src="1.weatherFlow/full.gif" alt="GIF">
+  <img src="1.weatherFlow/full (1).gif" alt="GIF">
 
 - 투두리스트
   
